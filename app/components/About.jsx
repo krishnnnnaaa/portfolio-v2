@@ -16,7 +16,12 @@ export default function About(){
     return(
         <Draggable handle=".nav" bounds={{bottom: 600}}>
         <div className={`bg-[#000000ab] absolute transition-[width] duration-700 border-[1px] border-[#ffffff33] flex-col rounded-xl items-center flex backdrop-blur-lg mx-auto mt-16 ${resizeAbout ? 'w-11/12 md:w-1/3 h-auto' : 'w-4/5 h-fit xl:h-[70vh]'}`}>
-            <div onMouseEnter={()=> setHoverAboutNav(true)} onMouseLeave={()=> setHoverAboutNav(false)} className="nav flex py-5 text-black w-full pl-5">
+            <div onMouseEnter={()=> setHoverAboutNav(true)} onMouseLeave={()=> setHoverAboutNav(false)} className="nav hidden lg:flex py-5 text-black w-full pl-5">
+                <div onClick={()=> {setToggleAbout(false); setResizeAbout(false)}} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#ff6059]"><GrFormClose className={`${hoverAboutNav? 'block' : 'hidden'} text-sm`}/></div>
+                <div onClick={()=> setToggleAbout(false)} className="h-4 w-4 cursor-pointer rounded-xl mx-1 bg-[#ffbd2e]"><MdMinimize className={`${hoverAboutNav? 'block' : 'hidden'} -mt-0.5`}/></div>
+                <div onClick={()=> setResizeAbout(!resizeAbout)} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#28c941]"><IoMdResize className={`${hoverAboutNav? 'block' : 'hidden'} text-xs`}/></div>
+            </div>
+            <div onMouseEnter={()=> setHoverAboutNav(true)} onMouseLeave={()=> setHoverAboutNav(false)} className="lg:hidden flex py-5 text-black w-full pl-5">
                 <div onClick={()=> {setToggleAbout(false); setResizeAbout(false)}} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#ff6059]"><GrFormClose className={`${hoverAboutNav? 'block' : 'hidden'} text-sm`}/></div>
                 <div onClick={()=> setToggleAbout(false)} className="h-4 w-4 cursor-pointer rounded-xl mx-1 bg-[#ffbd2e]"><MdMinimize className={`${hoverAboutNav? 'block' : 'hidden'} -mt-0.5`}/></div>
                 <div onClick={()=> setResizeAbout(!resizeAbout)} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#28c941]"><IoMdResize className={`${hoverAboutNav? 'block' : 'hidden'} text-xs`}/></div>

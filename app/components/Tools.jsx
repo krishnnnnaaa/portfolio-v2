@@ -22,7 +22,12 @@ export default function Tools(){
     return(
         <Draggable handle=".nav" bounds={{bottom: 600}}>
         <div className={`bg-[#000000ab] h-[70vh] absolute transition-[width] border-[1px] border-[#ffffff33] flex-col rounded-xl items-center flex backdrop-blur-lg md:h-[570px] mx-auto mt-16 ${resizeTools ? 'w-[90%] md:w-[400px]' : 'w-4/5 xl:w-[950px]'}`}>
-            <div onMouseEnter={()=> setHoverToolsNav(true)} onMouseLeave={()=> setHoverToolsNav(false)} className="nav flex py-5 text-black w-full pl-5">
+            <div onMouseEnter={()=> setHoverToolsNav(true)} onMouseLeave={()=> setHoverToolsNav(false)} className="nav hidden lg:flex py-5 text-black w-full pl-5">
+                <div onClick={()=> {setToggleTools(false); setResizeTools(false)}} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#ff6059]"><GrFormClose className={`${hoverToolsNav? 'block' : 'hidden'} text-sm`}/></div>
+                <div onClick={()=> setToggleTools(false)} className="h-4 w-4 cursor-pointer rounded-xl mx-1 bg-[#ffbd2e]"><MdMinimize className={`${hoverToolsNav? 'block' : 'hidden'} text-sm`}/></div>
+                <div onClick={()=> setResizeTools(!resizeTools)} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#28c941]"><IoMdResize className={`${hoverToolsNav? 'block' : 'hidden'} text-sm`}/></div>
+            </div>
+            <div onMouseEnter={()=> setHoverToolsNav(true)} onMouseLeave={()=> setHoverToolsNav(false)} className="lg:hidden flex py-5 text-black w-full pl-5">
                 <div onClick={()=> {setToggleTools(false); setResizeTools(false)}} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#ff6059]"><GrFormClose className={`${hoverToolsNav? 'block' : 'hidden'} text-sm`}/></div>
                 <div onClick={()=> setToggleTools(false)} className="h-4 w-4 cursor-pointer rounded-xl mx-1 bg-[#ffbd2e]"><MdMinimize className={`${hoverToolsNav? 'block' : 'hidden'} text-sm`}/></div>
                 <div onClick={()=> setResizeTools(!resizeTools)} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#28c941]"><IoMdResize className={`${hoverToolsNav? 'block' : 'hidden'} text-sm`}/></div>

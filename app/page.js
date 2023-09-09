@@ -21,7 +21,7 @@ export default function Home() {
   }
   
   return (
-   <div onContextMenu={contextMenu} className='overflow-hidden h-screen'>
+   <div onContextMenu={contextMenu} className='overflow-hidden h-screen flex justify-center md:block'>
     <Navbar/>
     { toggleAbout && <About/> }
     { toggleTools && <Tools/> }

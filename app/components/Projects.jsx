@@ -24,7 +24,12 @@ export default function Projects(){
     return(
         <Draggable handle=".nav" bounds={{bottom: 600}}>
         <div className={`bg-[#000000ab] h-[70vh] absolute transition-[width] border-[1px] border-[#ffffff33] flex-col rounded-xl items-center flex backdrop-blur-lg md:h-[570px] mx-auto mt-16 ${resizeProjects ? 'w-11/12 md:w-[400px]' : 'w-4/5 xl:w-[950px]'}`}>
-            <div onMouseEnter={()=> setHoverProjectsNav(true)} onMouseLeave={()=> setHoverProjectsNav(false)} className="nav flex py-5 text-black w-full pl-5">
+            <div onMouseEnter={()=> setHoverProjectsNav(true)} onMouseLeave={()=> setHoverProjectsNav(false)} className="nav hidden lg:flex py-5 text-black w-full pl-5">
+                <div onClick={()=> {setToggleProjects(false); setResizeProjects(false)}} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#ff6059]"><GrFormClose className={`${hoverProjectsNav? 'block' : 'hidden'} text-sm`}/></div>
+                <div onClick={()=>setToggleProjects(false)} className="h-4 w-4 cursor-pointer rounded-xl mx-1 bg-[#ffbd2e]"><MdMinimize className={`${hoverProjectsNav? 'block' : 'hidden'} text-sm`}/></div>
+                <div onClick={()=> setResizeProjects(!resizeProjects)} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#28c941]"><IoMdResize className={`${hoverProjectsNav? 'block' : 'hidden'} text-sm`}/></div>
+            </div>
+            <div onMouseEnter={()=> setHoverProjectsNav(true)} onMouseLeave={()=> setHoverProjectsNav(false)} className="lg:hidden flex py-5 text-black w-full pl-5">
                 <div onClick={()=> {setToggleProjects(false); setResizeProjects(false)}} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#ff6059]"><GrFormClose className={`${hoverProjectsNav? 'block' : 'hidden'} text-sm`}/></div>
                 <div onClick={()=>setToggleProjects(false)} className="h-4 w-4 cursor-pointer rounded-xl mx-1 bg-[#ffbd2e]"><MdMinimize className={`${hoverProjectsNav? 'block' : 'hidden'} text-sm`}/></div>
                 <div onClick={()=> setResizeProjects(!resizeProjects)} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#28c941]"><IoMdResize className={`${hoverProjectsNav? 'block' : 'hidden'} text-sm`}/></div>

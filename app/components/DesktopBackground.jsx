@@ -29,7 +29,11 @@ export default function DesktopBackground(){
     return(
         <Draggable handle=".nav" bounds={{bottom: 600}}>
         <div className={`bg-[#000000ab] h-[70vh] hidden w-[700px] absolute transition-[width] border-[1px] border-[#ffffff33] flex-col rounded-xl items-center md:flex backdrop-blur-lg md:h-[570px] mx-auto mt-16`}>
-            <div onMouseEnter={()=> setHoverDesktopBackgroundNav(true)} onMouseLeave={()=> setHoverDesktopBackgroundNav(false)} className="nav flex py-5 text-black w-full pl-5">
+            <div onMouseEnter={()=> setHoverDesktopBackgroundNav(true)} onMouseLeave={()=> setHoverDesktopBackgroundNav(false)} className="nav hidden lg:flex py-5 text-black w-full pl-5">
+                <div onClick={()=> setToggleDesktopBackground(false)} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#ff6059]"><GrFormClose className={`${hoverDesktopBackgroundNav? 'block' : 'hidden'} text-sm`}/></div>
+                <div onClick={()=> setToggleDesktopBackground(false)} className="h-4 w-4 cursor-pointer rounded-xl mx-1 bg-[#ffbd2e]"><MdMinimize className={`${hoverDesktopBackgroundNav? 'block' : 'hidden'} text-sm`}/></div>
+            </div>
+            <div onMouseEnter={()=> setHoverDesktopBackgroundNav(true)} onMouseLeave={()=> setHoverDesktopBackgroundNav(false)} className="lg:hidden flex py-5 text-black w-full pl-5">
                 <div onClick={()=> setToggleDesktopBackground(false)} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#ff6059]"><GrFormClose className={`${hoverDesktopBackgroundNav? 'block' : 'hidden'} text-sm`}/></div>
                 <div onClick={()=> setToggleDesktopBackground(false)} className="h-4 w-4 cursor-pointer rounded-xl mx-1 bg-[#ffbd2e]"><MdMinimize className={`${hoverDesktopBackgroundNav? 'block' : 'hidden'} text-sm`}/></div>
             </div>
