@@ -26,15 +26,18 @@ export default function Contact(){
             From : 'gupta.krishnalko111@gmail.com',
             Subject : "Message from your portfolio",
             Body : `Hello Krishna!, ${e.target[0].value} has sent you a DM. Message is: ${e.target[1].value}`
-        }).then(
-          message => alert(message)
+        }).then(()=>{
+            message => alert(message)
+            e.target[0].value = ''
+            e.target[1].value = ''
+        }
         );
     }
     return(
         <>
         <Script type="text/javascript" async defer src="https://smtpjs.com/v3/smtp.js"></Script>
         <Draggable handle=".nav" bounds={{bottom: 600}}>
-        <div className={`bg-[#000000ab] absolute transition-[width] duration-700 border-[1px] border-[#ffffff33] flex-col rounded-xl items-center flex backdrop-blur-lg mx-auto mt-16 ${resizeContact ? 'w-11/12 md:w-1/3 h-auto' : 'w-[350px] h-fit xl:h-auto'}`}>
+        <div className={`bg-[#000000ab] absolute z-[999] md:z-[1] transition-[width] duration-700 border-[1px] border-[#ffffff33] flex-col rounded-xl items-center flex backdrop-blur-lg mx-auto mt-16 ${resizeContact ? 'w-11/12 md:w-1/3 h-auto' : 'w-[350px] h-fit xl:h-auto'}`}>
             <div onMouseEnter={()=> setHoverContactNav(true)} onMouseLeave={()=> setHoverContactNav(false)} className="nav hidden lg:flex py-5 text-black w-full pl-5">
 
                 <button onClick={()=> {setToggleContact(false); setResizeContact(false)}} className="h-4 w-4 cursor-pointer flex justify-center items-center rounded-xl mx-1 bg-[#ff6059]"><GrFormClose className={`${hoverContactNav? 'block' : 'hidden'} text-sm`}/></button>
