@@ -30,6 +30,7 @@ export default function Contact(){
             message => alert(message)
             e.target[0].value = ''
             e.target[1].value = ''
+            alert("Message sent!")
         }
         );
     }

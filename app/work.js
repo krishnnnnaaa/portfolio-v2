@@ -8,7 +8,7 @@ export const work = [
         id: 1,
         project: "Lofically",
         image: lofically,
-        description: 'An app where you can enjoy listening bollywood lofi songs!',
+        description: 'Lofically lets you enjoy listening to bollywood lofi songs!',
         code_link: '',
         demo_link: 'https://lofically.vercel.app/'
     },
@@ -16,7 +16,7 @@ export const work = [
         id: 2,
         project: "YouTube clone",
         image: youtube,
-        description: 'An app where you can enjoy listening bollywood lofi songs!',
+        description: 'A cloned app that works almost the same as the original YouTube.',
         code_link: 'https://github.com/krishnnnnaaa/youtube_clone',
         demo_link: 'https://notyouryoutube.netlify.app/'
     },
@@ -24,7 +24,7 @@ export const work = [
         id: 3,
         project: "Weather Today",
         image: weather,
-        description: 'An app where you can enjoy listening bollywood lofi songs!',
+        description: 'An app that tells you about the weather in your city',
         code_link: 'https://github.com/krishnnnnaaa/Weather-App',
         demo_link: 'https://thriving-kitten-146302.netlify.app/'
     }
