@@ -4,9 +4,9 @@ import { BsGithub, BsInstagram, BsTwitter} from 'react-icons/bs'
 import Link from 'next/link'
 export default function Navbar(){
     return(
-        <div className='flex w-full justify-between md:relative md:z-[999999999] px-4 items-center h-10 bg-[#000000ab]'>
+        <div className='flex w-full text-white justify-between md:relative md:z-[999999999] px-4 items-center h-10 bg-[#000000ab]'>
             <div>
-                <TfiWorld className='text-xl'/>
+                <TfiWorld className='text-xl '/>
             </div>
             <div>
                 <ul className='flex text-sm'>
