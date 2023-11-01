@@ -11,7 +11,7 @@ import { AppStateContext } from "../appContext/appState";
 export default function About(){
     const [hoverAboutNav, setHoverAboutNav] = useState(false)
 
-    // About window resize functionality
+    // About window resize state
     const { setToggleAbout, setResizeAbout, resizeAbout } = useContext(AppStateContext)
     return(
         <Draggable handle=".nav" bounds={{bottom: 600}}>

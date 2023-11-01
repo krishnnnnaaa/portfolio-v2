@@ -9,7 +9,7 @@ import Script from "next/script";
 
 export default function Contact(){
     const [hoverContactNav, setHoverContactNav] = useState(false)
-    const { setToggleContact, setResizeContact, resizeContact, setMessageData, messageData} = useContext(AppStateContext)
+    const { setToggleContact, setResizeContact, resizeContact, setMessageData} = useContext(AppStateContext)
 
     const messageMe = (e) => {
         e.preventDefault()
