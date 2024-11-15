@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: url('../app/assets/wallpapers/12.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  height: 100vh;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 100vh;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: #a1a1a1;
+  border-radius: 100vh;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a2a2a2;
+}
+.context{
+  cursor: url(../app/assets/Link.cur), auto;
+}
